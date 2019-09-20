@@ -1,0 +1,37 @@
+Kawa 1 - 5z³/dag<br>
+Kawa 2 - 7z³/dag<br>
+Kawa 3 - 6z³/dag<br><br>
+
+<script type="text/javascript">
+
+	function oblicz(){
+		var numerkawy = document.getElementById("nrkawy").value;
+		var wagakawy = document.getElementById("wgkawy").value;
+		var cena = 0;
+		
+		if (numerkawy==1){
+			cena = 5*wagakawy;
+		}
+		
+		else if(numerkawy==2){
+			cena = 7*wagakawy;
+		}
+		
+		else if(numerkawy==3){
+			cena = 6*wagakawy;
+		}
+		
+		else{
+			cena = 0;
+		}
+		
+		document.getElementById("wynik").innerHTML = "Koszt zamówienia wynosi " +cena+ " z³";
+		
+	}
+
+</script>
+
+<input type="number" id="nrkawy"><br>
+<input type="number" id="wgkawy"><br>
+<input type="submit" value="Zamów" onclick="oblicz()">
+<p id="wynik"></p>
